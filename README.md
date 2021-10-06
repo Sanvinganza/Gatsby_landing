@@ -1,31 +1,47 @@
-# anton-shvetsov/anton_shvetsov_gatsbyjs-test-landing
+# GatsbyJS: test landing - Anton Shvetsov
 
+## Technology stack:
 
+Core
+- GatsbyJS
+- ReactJS
 
-## Getting Started
+Additional
+ - Animation
+    - React Spring
+ - Visualization
+    - Theme UI
+ 
+GatsbyJS plugins
+- gatsby-plugin-emotion
+- gatsby-plugin-manifest
+- gatsby-plugin-mdx
+- gatsby-plugin-offline
+- gatsby-plugin-react-helmet
+- gatsby-plugin-react-svg
+- gatsby-plugin-sharp
+- gatsby-plugin-sitemap
+- gatsby-plugin-theme-ui
+- gatsby-plugin-typescript
+- gatsby-plugin-web-font-loader
+- gatsby-plugin-webpack-size
+- gatsby-remark-autolink-headers
+- gatsby-remark-copy-linked-files
+- gatsby-remark-images
+- gatsby-remark-responsive-iframe
+- gatsby-source-filesystem
+- gatsby-transformer-json
+- gatsby-transformer-remark
+- gatsby-transformer-sharp
+- gatsby-plugin-transition-link
 
-Download links:
+## Design
 
-SSH clone URL: ssh://git@git.jetbrains.space/dashbouquet/anton-shvetsov/anton_shvetsov_gatsbyjs-test-landing.git
+- [**Figma**](https://www.figma.com/file/ipYvXXQyjZIQUvuiQhtn41/landing-healthcare-(Copy)?node-id=0%3A1)
 
-HTTPS clone URL: https://git.jetbrains.space/dashbouquet/anton-shvetsov/anton_shvetsov_gatsbyjs-test-landing.git
+## To Help
 
-
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-## Prerequisites
-
-What things you need to install the software and how to install them.
-
-```
-Examples
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a production system.
-
-## Resources
-
-Add links to external resources for this project, such as CI server, bug tracker, etc.
+- [**ReactJS**](https://en.reactjs.org/)
+- [**GatsbyJS**](https://www.gatsbyjs.org/)
+- [**Google**](https://www.google.com/)
+- I'm ;)
