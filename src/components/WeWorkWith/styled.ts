@@ -7,27 +7,64 @@ import icon5 from "../../assets/images/WeWorkWith/icon5.svg";
 import icon6 from "../../assets/images/WeWorkWith/icon6.svg";
 import icon7 from "../../assets/images/WeWorkWith/icon7.svg";
 
-export const WeWorkWithContainer = styled.div`
+export const WeWorkWithWrapper = styled.div`
   display: grid;
   height: 100vh;
-  max-width: 1280px;
-  min-height: 708px;                          
-  position: relative;
-  padding: 242px 81px 229px;            
+  max-width: 1280px;                          
+  padding: 242px 81px 229px;
+  grid-template-columns: repeat(6, [col] 211px ) ;
+	grid-template-rows: repeat(3, [row] 211px  );
 `;
-
-export const Icons = [icon1, icon2, icon3, icon4, icon5, icon6, icon7].map( icon => {
-  return styled(icon)
+export const Icons = [icon1, icon2, icon3, icon4, icon5, icon6, icon7].map(icon => {
+  return styled(icon)`
+    background: linear-gradient(90deg, #6E32EE 50%, #1E242F 50%);
+    height: 60px;
+  `
 });
-
-export const Icon1 = styled(icon1)`
-  margin: 5px;
-`;
-
+export const WeWorkWithItemsStyle = [
+  {
+    gridColumn: 'col 4',
+    gridRow: 'row 1'
+  },
+  {
+    gridColumn: 'col 6',
+    gridRow: 'row 1'
+  },
+  {
+    gridColumn: 'col 1',
+    gridRow: 'row 2'
+  },
+  {
+    gridColumn: 'col 3',
+    gridRow: 'row 2'
+  },
+  {
+    gridColumn: 'col 5',
+    gridRow: 'row 2'
+  },
+  {
+    gridColumn: 'col 2',
+    gridRow: 'row 3'
+  },
+  {
+    gridColumn: 'col 4',
+    gridRow: 'row 3'
+  }
+]
+// .map( el => {
+//   return {...el, height: '106 px'} 
+// });
+export const WeWorkWithTitleStyle = {
+  gridColumn: 'col 1/ span 3',
+  gridRow: 'row 1',
+  justifySelf: 'center'
+};
 export const WeWorkWithTitle = styled.div`
   display: flex;
   font: 700 36px "Ubuntu", sans-serif;
-`
-export const WeWorkWithItem = styled.div`
-  display: flex;
-`
+  align-text: center;
+`;
+export const WeWorkWithItemTextStyle = styled.div`
+  font: 500 20px "Ubuntu", sans-serif;
+
+`;

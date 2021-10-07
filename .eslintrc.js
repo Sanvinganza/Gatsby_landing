@@ -5,8 +5,6 @@ module.exports = {
   extends: [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
   ],
   settings: {
     react: {
@@ -18,7 +16,7 @@ module.exports = {
     node: true,
     es6: true,
   },
-  plugins: ["@typescript-eslint", "react", "prettier"],
+  plugins: ["@typescript-eslint", "react"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -32,8 +30,6 @@ module.exports = {
     // Disable prop-types as we use TypeScript for type checking
     "react/prop-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
-    // Enable prettier rules
-    "prettier/prettier": "error",
     // interface start with capital I
     "@typescript-eslint/interface-name-prefix": "off",
     // allow "any" as type

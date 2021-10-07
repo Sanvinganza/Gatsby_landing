@@ -12,7 +12,7 @@ import WeWorkWith from "../components/WeWorkWith";
 
 const IndexPage: React.FC<any> = () => {
   const {
-    header: { frontmatter },
+    header: { frontmatter }
   } = useStaticQuery(
     graphql`
       query {

@@ -60,7 +60,6 @@ export const HeaderTitleSmallSquareBottom = styled(HeaderSmallSquare)`
   left: auto;
   right: 172px;
 `;
-
 export const HeaderImageContainer = styled.div`
   position: relative;
   width: 50%;
