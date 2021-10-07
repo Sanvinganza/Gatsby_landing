@@ -8,6 +8,7 @@ import "./normalize.scss";
 import "./fonts.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import WeWorkWith from "../components/WeWorkWith";
 
 const IndexPage: React.FC<any> = () => {
   const {
@@ -32,6 +33,7 @@ const IndexPage: React.FC<any> = () => {
       <ErrorBoundry>
         <DefaultLayout>
           <Header frontmatter={frontmatter} />
+          <WeWorkWith />
         </DefaultLayout>
       </ErrorBoundry>
     </React.Fragment>
