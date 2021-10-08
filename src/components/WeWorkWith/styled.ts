@@ -15,12 +15,23 @@ export const WeWorkWithWrapper = styled.div`
   grid-template-columns: repeat(6, [col] 211px ) ;
 	grid-template-rows: repeat(3, [row] 211px  );
 `;
-export const Icons = [icon1, icon2, icon3, icon4, icon5, icon6, icon7].map(icon => {
-  return styled(icon)`
+export const WeWorkWithTitleStyle = {
+  gridColumn: 'col 1/ span 3',
+  gridRow: 'row 1',
+  justifySelf: 'center'
+};
+export const WeWorkWithTitle = styled.div`
+  display: flex;
+  font: 700 36px "Ubuntu", sans-serif;
+  align-text: center;
+`;
+export const WeWorkWithPostsImages =
+  [icon1, icon2, icon3, icon4, icon5, icon6, icon7].map(icon => {
+    return styled(icon)`
     height: 60px;
   `
-});
-export const WeWorkWithItemsStyle = [
+  });
+export const WeWorkWithPostsStyle = [
   {
     gridColumn: 'col 4',
     gridRow: 'row 1'
@@ -49,28 +60,21 @@ export const WeWorkWithItemsStyle = [
     gridColumn: 'col 4',
     gridRow: 'row 3'
   }
-]
-// .map( el => {
-//   return {...el, height: '106 px'} 
-// });
-export const WeWorkWithItemBackground = styled.div`
+];
+export const WeWorkWithPost = styled.div`
+  display: flex;
+  font: 700 36px "Ubuntu", sans-serif;
+  align-text: center;
+  flex-direction: column;
+`;
+export const WeWorkWithPostBackground = styled.div`
   height: 106px;
   width: 106px;
   background: linear-gradient(90deg, #6E32EE 50%, #1E242F 50%);
   align-items: center;
-  text-align: center;
-`;
-export const WeWorkWithTitleStyle = {
-  gridColumn: 'col 1/ span 3',
-  gridRow: 'row 1',
-  justifySelf: 'center'
-};
-export const WeWorkWithTitle = styled.div`
   display: flex;
-  font: 700 36px "Ubuntu", sans-serif;
-  align-text: center;
+  justify-content: center;
 `;
-export const WeWorkWithItemTextStyle = styled.div`
+export const WeWorkWithPostTextStyle = styled.div`
   font: 500 20px "Ubuntu", sans-serif;
-
 `;

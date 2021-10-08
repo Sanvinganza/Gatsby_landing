@@ -1,7 +1,7 @@
 ---
 type: WeWorkWith
 title: "We Work With"
-items: 
+descriptions: 
     - "Private medical practices"
     - "Medical device manufacturers"
     - "Medical and research laboratories"

@@ -3,12 +3,13 @@ import React from 'react';
 import {
     WeWorkWithWrapper,
     WeWorkWithTitle,
-    WeWorkWithItemsStyle,
+    WeWorkWithPostsStyle,
     WeWorkWithTitleStyle,
-    WeWorkWithItemTextStyle,
-    Icons,
-    WeWorkWithItemBackground
-} from './styled';
+    WeWorkWithPostTextStyle,
+    WeWorkWithPostsImages,
+    WeWorkWithPostBackground,
+    WeWorkWithPost
+} from './styled'
 
 const WeWorkWith: React.FC<any> = () => {
 
@@ -19,26 +20,28 @@ const WeWorkWith: React.FC<any> = () => {
         query{
             WeWorkWith: markdownRemark (frontmatter: {type: {eq: "WeWorkWith"}}) {
                 frontmatter {
-                    items
+                    descriptions
                     title
                 }
             }
         }
     `);
 
-    const { title, items } = frontmatter;
+    const { title, descriptions } = frontmatter;
 
     return (
         <WeWorkWithWrapper>
             <WeWorkWithTitle style={WeWorkWithTitleStyle}>{title}</WeWorkWithTitle>
-            {Icons.map( (icon, index) => {
+            {WeWorkWithPostsImages.map( (image, index) => {
                 return (
-                    <div  key={index} style={WeWorkWithItemsStyle[index]}>
-                        <WeWorkWithItemBackground> 
-                            {React.createElement(icon)}
-                        </WeWorkWithItemBackground>
-                        <WeWorkWithItemTextStyle>{items[index]}</WeWorkWithItemTextStyle>
-                    </div>
+                    <WeWorkWithPost key={index} style={WeWorkWithPostsStyle[index]}>
+                        <WeWorkWithPostBackground> 
+                            {React.createElement(image)}
+                        </WeWorkWithPostBackground>
+                        <WeWorkWithPostTextStyle>
+                            {descriptions[index]}
+                        </WeWorkWithPostTextStyle>
+                    </WeWorkWithPost>
                 )
             })}
         </WeWorkWithWrapper>
