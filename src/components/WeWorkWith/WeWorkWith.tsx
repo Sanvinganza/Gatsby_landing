@@ -6,7 +6,8 @@ import {
     WeWorkWithItemsStyle,
     WeWorkWithTitleStyle,
     WeWorkWithItemTextStyle,
-    Icons
+    Icons,
+    WeWorkWithItemBackground
 } from './styled';
 
 const WeWorkWith: React.FC<any> = () => {
@@ -31,10 +32,14 @@ const WeWorkWith: React.FC<any> = () => {
         <WeWorkWithWrapper>
             <WeWorkWithTitle style={WeWorkWithTitleStyle}>{title}</WeWorkWithTitle>
             {Icons.map( (icon, index) => {
-                return <div key={index} style={WeWorkWithItemsStyle[index]}>
-                    {React.createElement(icon)}
-                    <WeWorkWithItemTextStyle>{items[index]}</WeWorkWithItemTextStyle>
-                </div>
+                return (
+                    <div  key={index} style={WeWorkWithItemsStyle[index]}>
+                        <WeWorkWithItemBackground> 
+                            {React.createElement(icon)}
+                        </WeWorkWithItemBackground>
+                        <WeWorkWithItemTextStyle>{items[index]}</WeWorkWithItemTextStyle>
+                    </div>
+                )
             })}
         </WeWorkWithWrapper>
     );

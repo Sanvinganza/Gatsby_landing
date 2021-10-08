@@ -17,7 +17,6 @@ export const WeWorkWithWrapper = styled.div`
 `;
 export const Icons = [icon1, icon2, icon3, icon4, icon5, icon6, icon7].map(icon => {
   return styled(icon)`
-    background: linear-gradient(90deg, #6E32EE 50%, #1E242F 50%);
     height: 60px;
   `
 });
@@ -54,6 +53,13 @@ export const WeWorkWithItemsStyle = [
 // .map( el => {
 //   return {...el, height: '106 px'} 
 // });
+export const WeWorkWithItemBackground = styled.div`
+  height: 106px;
+  width: 106px;
+  background: linear-gradient(90deg, #6E32EE 50%, #1E242F 50%);
+  align-items: center;
+  text-align: center;
+`;
 export const WeWorkWithTitleStyle = {
   gridColumn: 'col 1/ span 3',
   gridRow: 'row 1',
