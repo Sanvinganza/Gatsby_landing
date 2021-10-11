@@ -1,14 +1,13 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { PostDescription, SectionTitle } from '../styled';
 import {
-    WeWorkWithWrapper,
-    WeWorkWithTitle,
-    WeWorkWithPostsStyle,
-    WeWorkWithTitleStyle,
-    WeWorkWithPostTextStyle,
-    WeWorkWithPostsImages,
-    WeWorkWithPostBackground,
-    WeWorkWithPost
+    Container,
+    PostsStyle,
+    TitleStyle,
+    PostsImages,
+    PostBackground,
+    PostBackgroundStyle
 } from './styled'
 
 const WeWorkWith: React.FC<any> = () => {
@@ -30,21 +29,23 @@ const WeWorkWith: React.FC<any> = () => {
     const { title, descriptions } = frontmatter;
 
     return (
-        <WeWorkWithWrapper>
-            <WeWorkWithTitle style={WeWorkWithTitleStyle}>{title}</WeWorkWithTitle>
-            {WeWorkWithPostsImages.map( (image, index) => {
+        <Container>
+            <SectionTitle style={TitleStyle}>
+                {title}
+            </SectionTitle>
+            {PostsImages.map( (image, index) => {
                 return (
-                    <WeWorkWithPost key={index} style={WeWorkWithPostsStyle[index]}>
-                        <WeWorkWithPostBackground> 
+                    <PostDescription key={index} style={PostsStyle[index]}>
+                        <PostBackground css={PostBackgroundStyle}> 
                             {React.createElement(image)}
-                        </WeWorkWithPostBackground>
-                        <WeWorkWithPostTextStyle>
+                        </PostBackground>
+                        <PostDescription>
                             {descriptions[index]}
-                        </WeWorkWithPostTextStyle>
-                    </WeWorkWithPost>
+                        </PostDescription>
+                    </PostDescription>
                 )
             })}
-        </WeWorkWithWrapper>
+        </Container>
     );
 };
 
