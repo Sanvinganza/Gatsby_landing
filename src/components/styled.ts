@@ -5,6 +5,7 @@ export const __purple = `#7A3BFF`;
 export const __red = `#F03F5F`;
 export const __yellow = `#FFD363`;
 export const __grey = `#535B66`;
+export const __greyLite = '#D8D9D9';
 
 export const SectionTitle = styled.div`
     font-family: Ubuntu;
@@ -28,6 +29,8 @@ export const Description = styled.div`
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
+    line-height: 200%;
+    color: ${__grey};
 `;
 export const PostDescription = styled.div`
     font-family: Ubuntu;

@@ -12,7 +12,8 @@ export const Container = styled.div`
   display: grid;
   height: 100vh;
   max-width: 1280px;                          
-  padding: 242px 81px 229px;
+  padding: 0px 81px 229px;
+  margin-top: 242px;
   grid-template-columns: repeat(6, [col] 211px ) ;
 	grid-template-rows: repeat(3, [row] 211px  );
 `;
