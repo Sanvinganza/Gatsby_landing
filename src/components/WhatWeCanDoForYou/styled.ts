@@ -7,6 +7,9 @@ export const Container = styled.div`
 export const TitleStyle = {
     textAlign: 'end',
     marginRight: '13%',
+    marginLeft: 'auto',
+    marginRigth: '211px',
+    maxWidth: '224px'
 };
 export const PostDescriptionStyle = css`
     max-width: 302px;
@@ -32,7 +35,7 @@ export const PurpleSquare = styled.div`
     width: 136px;
     height: 136px;
     position: absolute;
-    bottom: 141px;
+    bottom: 151px;
     left: 81px;
     background-color: ${__purple}; 
 `;
