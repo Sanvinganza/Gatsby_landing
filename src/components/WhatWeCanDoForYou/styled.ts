@@ -2,7 +2,8 @@ import styled, { css } from "styled-components";
 import { __greyLite, __purple, __red, __yellow } from "../styled";
 
 export const Container = styled.div`
-    margin-top: 229px;
+    position: relative;
+    margin-top: 200px;
 `;
 export const TitleStyle = {
     textAlign: 'end',
@@ -11,11 +12,11 @@ export const TitleStyle = {
     marginRigth: '211px',
     maxWidth: '224px'
 };
-export const PostDescriptionStyle = css`
+export const PostDescriptionCSS = css`
     max-width: 302px;
     margin-left: 30px;
 `;
-export const PostBackgroundStyle = css`
+export const PostBackgroundCSS = css`
     background: linear-gradient(90deg, ${__greyLite} calc(100% - 15px), ${__purple} 15px);
     background-repeat: no-repeat;
     padding-left: calc(36% - 15px);

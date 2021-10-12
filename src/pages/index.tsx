@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import WeWorkWith from "../components/WeWorkWith";
 import WhatWeCanDoForYou from "../components/WhatWeCanDoForYou";
+import FeaturesWeAdd from "../components/FeaturesWeAdd";
 
 const IndexPage: React.FC<any> = () => {
   const {
@@ -36,6 +37,7 @@ const IndexPage: React.FC<any> = () => {
           <Header frontmatter={frontmatter} />
           <WeWorkWith />
           <WhatWeCanDoForYou />
+          <FeaturesWeAdd />
         </DefaultLayout>
       </ErrorBoundry>
     </React.Fragment>

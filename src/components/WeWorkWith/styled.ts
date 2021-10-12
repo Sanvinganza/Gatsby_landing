@@ -10,12 +10,10 @@ import { __black, __purple } from '../styled';
 
 export const Container = styled.div`
   display: grid;
-  height: 100vh;
-  max-width: 1280px;                          
-  padding: 0px 81px 229px;
+  padding: 0 81px;
   margin-top: 242px;
-  grid-template-columns: repeat(6, [col] 211px ) ;
-	grid-template-rows: repeat(3, [row] 211px  );
+  grid-template-columns: repeat(6, [col] 18% ) ;
+	grid-template-rows: repeat(3, [row] 40% );
 `;
 export const TitleStyle = 
 {

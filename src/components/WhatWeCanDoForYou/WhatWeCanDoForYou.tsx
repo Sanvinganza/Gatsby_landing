@@ -1,12 +1,12 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import { Description, PostDescription, SectionTitle } from '../styled';
-import { Container, PostBackground, PostBackgroundStyle, PostBackgroundStyleSecond, PostDescriptionStyle, PostDescriptionStyleSecond, PurpleSquare, RedSquare, TitleStyle, YellowSquare } from './styled';
+import { Description, SectionTitle } from '../styled';
+import { Container, PostBackground, PostBackgroundCSS, PostBackgroundStyleSecond, PostDescriptionCSS, PostDescriptionStyleSecond, PurpleSquare, RedSquare, TitleStyle, YellowSquare } from './styled';
 
 const WhatWeCanDoForYou: React.FC<any> = () => {
 
-    const { 
-        WhatWeCanDoForYou: {frontmatter} 
+    const {
+        WhatWeCanDoForYou: { frontmatter }
     } = useStaticQuery(
         graphql`
         query{
@@ -20,23 +20,27 @@ const WhatWeCanDoForYou: React.FC<any> = () => {
     `);
 
     const { title, descriptions } = frontmatter;
-        console.log(title)
+
     return (
         <Container>
             <SectionTitle style={TitleStyle}>
                 {title}
             </SectionTitle>
-            
-            <PostBackground css={PostBackgroundStyle}>
-                <Description css={PostDescriptionStyle}>
+
+            <PostBackground css={PostBackgroundCSS}>
+                <Description css={PostDescriptionCSS}>
                     <RedSquare />
-                    {descriptions[0]}
+                    {descriptions
+                        .slice(0, 6)
+                        .map(description => <div>{description}</div>)}
                 </Description>
             </PostBackground>
-            
-            <PostBackground css={PostBackgroundStyle} style={PostBackgroundStyleSecond}>
-                <Description css={PostDescriptionStyle} style={PostDescriptionStyleSecond}>
-                    {descriptions[1]}
+
+            <PostBackground css={PostBackgroundCSS} style={PostBackgroundStyleSecond}>
+                <Description css={PostDescriptionCSS} style={PostDescriptionStyleSecond}>
+                    {descriptions
+                        .slice(6)
+                        .map(description => <div>{description}</div>)}
                     <PurpleSquare />
                     <YellowSquare />
                 </Description>

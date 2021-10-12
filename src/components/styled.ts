@@ -40,4 +40,5 @@ export const PostDescription = styled.div`
     line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
+    max-width: 200px;
 `;
