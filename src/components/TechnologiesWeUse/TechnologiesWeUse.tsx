@@ -27,7 +27,7 @@ const TechnologiesWeUse: React.FC<any> = () => {
                 {descriptions.map((description, index) => {
                     return (
                         <Post key={description}>
-                            <PostBackground style={PostBackgroundStyle}>
+                            <PostBackground>
                                 {React.createElement(PostImages[index])}
                             </PostBackground>    
                             <PostDescription key={description}>

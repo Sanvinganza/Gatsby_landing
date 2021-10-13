@@ -12,6 +12,7 @@ import WeWorkWith from "../components/WeWorkWith";
 import WhatWeCanDoForYou from "../components/WhatWeCanDoForYou";
 import FeaturesWeAdd from "../components/FeaturesWeAdd";
 import TechnologiesWeUse from "../components/TechnologiesWeUse";
+import MobilyApp from "../components/MobileApp";
 
 const IndexPage: React.FC<any> = () => {
   const {
@@ -40,6 +41,7 @@ const IndexPage: React.FC<any> = () => {
           <WhatWeCanDoForYou />
           <FeaturesWeAdd />
           <TechnologiesWeUse />
+          <MobilyApp />
         </DefaultLayout>
       </ErrorBoundry>
     </React.Fragment>
