@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { PostDescription, SectionTitle } from "../styled";
-import { Container, Post, PostBackground, PostBackgroundStyle, PostDescriptions, PostDescriptionStyle, PostImages, TitleStyle } from "./styled";
+import { Container, Post, PostBackground, PostDescriptions, PostImages, TitleStyle } from "./styled";
 
 const TechnologiesWeUse: React.FC<any> = () => {
     const {
