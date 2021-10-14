@@ -1,8 +1,7 @@
 import { DoubleQuotesL } from "@styled-icons/remix-editor";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { __black, __yellow, __purple, __red } from "../styled";
 import phone from '../../assets/images/MobilyApp/Group.svg';
-import { NoEncryption } from "@styled-icons/material";
 
 export const Container = styled.div`
     margin-top: 237px;
