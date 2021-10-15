@@ -4,6 +4,7 @@ import { PostDescription, SectionTitle } from "../styled";
 import { Arrows, BackArrow, CardContainer, Container, NextArrow, SectionTitleStyle, SliderContainer, TitleContainer } from "./styled";
 import Img from "gatsby-image";
 import {useState} from 'react';
+import { number } from "prop-types";
 
 const OurTeam: React.FC<any> = () => {
     const {
@@ -42,9 +43,13 @@ const OurTeam: React.FC<any> = () => {
 `);
     const { title, cards } = frontmatter;
     const slider = React.useRef(null);
-    const [state, setState] = useState({
-        activeSlide: 0,
-        activeSlide2: 0
+
+    interface IState {
+        activeSlide: number;
+    }
+
+    const [state, setState] = useState<IState>({
+        activeSlide: 0
     });
     
     const settings = {
@@ -56,11 +61,17 @@ const OurTeam: React.FC<any> = () => {
         speed: 2000,
         slidesToShow: 3,
         autoplay: true,
-        // autoplaySpeed: 1500,
         slidesToScroll: 1,
         centerPadding:"25px",
-        beforeChange: (current, next) => setState({ activeSlide: next }),
-        afterChange: current => setState({ activeSlide: current })
+        beforeChange: (current: number, next: number) => setState({ activeSlide: next }),
+        afterChange: (current: number) => setState({ activeSlide: current })
+    };
+
+    interface ICard {
+        name: string;
+        position: string;
+        image: any;
+        image_on: any;
     };
 
     return (
@@ -79,7 +90,7 @@ const OurTeam: React.FC<any> = () => {
                 ref={slider} 
                 {...settings} 
                 >
-                {cards.map((card,index) => {
+                {cards.map((card: ICard,index: number) => {
                     return(
                         <CardContainer key={card.name}>
                             {
