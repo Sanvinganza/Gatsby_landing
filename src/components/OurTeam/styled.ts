@@ -25,6 +25,7 @@ export const TitleContainer = styled.div`
 `;
 export const SliderContainer = styled(Slider)`
   width: 50%;
+  margin-left: 106px;
 `;
 export const Arrows = styled.div`
   width: 100%;
@@ -50,3 +51,10 @@ export const CardContainer = styled.div`
   align-text: center;
   margin: 25px 10px;
 `;
+export const CardSectionTitleStyle = {
+  fontSize: '20px',
+};
+export const CardContainerStyle = {
+  alignText: 'center',
+  margin: '0 10px' 
+}

@@ -1,10 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { PostDescription, SectionTitle } from "../styled";
-import { Arrows, BackArrow, CardContainer, Container, NextArrow, SectionTitleStyle, SliderContainer, TitleContainer } from "./styled";
+import { Arrows, BackArrow, CardContainer, CardContainerStyle, CardSectionTitleStyle, Container, NextArrow, SectionTitleStyle, SliderContainer, TitleContainer } from "./styled";
 import Img from "gatsby-image";
 import {useState} from 'react';
-import { number } from "prop-types";
 
 const OurTeam: React.FC<any> = () => {
     const {
@@ -54,13 +53,12 @@ const OurTeam: React.FC<any> = () => {
     
     const settings = {
         className: "center",
+        centerMode: true,
         focusOnSelect: true,
         infinite: true,
-        centerMode: true,
         arrows: false,
         speed: 2000,
-        slidesToShow: 3,
-        autoplay: true,
+        slidesToShow: 3 ,
         slidesToScroll: 1,
         centerPadding:"25px",
         beforeChange: (current: number, next: number) => setState({ activeSlide: next }),
@@ -92,11 +90,11 @@ const OurTeam: React.FC<any> = () => {
                 >
                 {cards.map((card: ICard,index: number) => {
                     return(
-                        <CardContainer key={card.name}>
+                        <CardContainer key={card.name} style={CardContainerStyle}>
                             {
                                 state.activeSlide === index?
                                 <>
-                                    <SectionTitle>{card.name}</SectionTitle>
+                                    <SectionTitle style={CardSectionTitleStyle}>{card.name}</SectionTitle>
                                     <PostDescription>{card.position}</PostDescription>
                                     <Img fixed={card.image_on.childImageSharp.fixed}/> 
                                 </>
