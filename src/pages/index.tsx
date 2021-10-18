@@ -15,6 +15,7 @@ import TechnologiesWeUse from "../components/TechnologiesWeUse";
 import MobilyApp from "../components/MobileApp";
 import OurTeam from "../components/OurTeam";
 import SaveTime from "../components/SaveTime";
+import SendForm from "../components/SendForm";
 
 const IndexPage: React.FC<any> = () => {
   const {
@@ -46,6 +47,7 @@ const IndexPage: React.FC<any> = () => {
           <MobilyApp />
           <OurTeam />
           <SaveTime />
+          <SendForm />
         </DefaultLayout>
       </ErrorBoundry>
     </React.Fragment>
