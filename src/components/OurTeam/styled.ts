@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import Slider from 'react-slick';
 import styled from "styled-components";
 import next from "../../assets/images/OurTeam/next.svg";
@@ -22,6 +21,7 @@ export const TitleContainer = styled.div`
   flex-direction: column;
   height: 340px;
   justify-content: space-between;
+  align-self: center;
 `;
 export const SliderContainer = styled(Slider)`
   width: 50%;
@@ -49,12 +49,30 @@ export const CardContainer = styled.div`
   width: 225px;
   height: 300px;
   align-text: center;
-  margin: 25px 10px;
+  margin: 25px 0;
 `;
 export const CardSectionTitleStyle = {
   fontSize: '20px',
+  textAlign: 'center',
+  maxWidth: '225px',
 };
 export const CardContainerStyle = {
-  alignText: 'center',
-  margin: '0 10px' 
-}
+  margin: '0 10px',
+};
+export const PostDescriptionStyle = {
+  textAlign: 'center',
+  maxWidth: '225px',
+};
+export const ImgStyle = {
+  marginTop: '104px',
+  maxWidth: '240px',
+};
+export const YellowSquare = styled.div`
+  position: absolute;
+  width: 720px;
+  height: 307px;
+  right: 0;
+  bottom: 0;
+  background-color: ${__yellow};
+  z-index: -1;
+`;

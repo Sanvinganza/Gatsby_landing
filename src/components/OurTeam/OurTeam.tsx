@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { PostDescription, SectionTitle } from "../styled";
-import { Arrows, BackArrow, CardContainer, CardContainerStyle, CardSectionTitleStyle, Container, NextArrow, SectionTitleStyle, SliderContainer, TitleContainer } from "./styled";
+import { Arrows, BackArrow, CardContainer, CardContainerStyle, CardSectionTitleStyle, Container, ImgStyle, ImgStyleActive, NextArrow, PostDescriptionStyle, SectionTitleStyle, SliderContainer, TitleContainer, YellowSquare } from "./styled";
 import Img from "gatsby-image";
 import {useState} from 'react';
 
@@ -52,13 +52,14 @@ const OurTeam: React.FC<any> = () => {
     });
     
     const settings = {
-        className: "center",
-        centerMode: true,
         focusOnSelect: true,
         infinite: true,
         arrows: false,
-        speed: 2000,
-        slidesToShow: 3 ,
+        dots: false,
+        lazyLoad: true,
+        speed: 150,
+        autoplay: true,
+        slidesToShow: 3,
         slidesToScroll: 1,
         centerPadding:"25px",
         beforeChange: (current: number, next: number) => setState({ activeSlide: next }),
@@ -72,6 +73,7 @@ const OurTeam: React.FC<any> = () => {
         image_on: any;
     };
 
+    
     return (
         <Container>
             <TitleContainer>
@@ -84,10 +86,7 @@ const OurTeam: React.FC<any> = () => {
                     <NextArrow onClick={() => slider?.current?.slickNext()}/>
                 </Arrows>
             </TitleContainer>
-            <SliderContainer 
-                ref={slider} 
-                {...settings} 
-                >
+            <SliderContainer ref={slider} {...settings} >
                 {cards.map((card: ICard,index: number) => {
                     return(
                         <CardContainer key={card.name} style={CardContainerStyle}>
@@ -95,16 +94,17 @@ const OurTeam: React.FC<any> = () => {
                                 state.activeSlide === index?
                                 <>
                                     <SectionTitle style={CardSectionTitleStyle}>{card.name}</SectionTitle>
-                                    <PostDescription>{card.position}</PostDescription>
+                                    <PostDescription style={PostDescriptionStyle}>{card.position}</PostDescription>
                                     <Img fixed={card.image_on.childImageSharp.fixed}/> 
                                 </>
                                 :
-                                <Img fixed={card.image.childImageSharp.fixed} />
+                                <Img style={ImgStyle} fixed={card.image.childImageSharp.fixed} />
                             }
                         </CardContainer>
                     )
                 })}
             </SliderContainer>
+            <YellowSquare />
         </Container>
     )
 }
