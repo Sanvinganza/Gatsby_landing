@@ -11,6 +11,7 @@ export const Container = styled.div`
     height: 500px;
     width: 100%;
     max-width: 1440px;
+    position: relative;
 `;
 export const SectionTitleStyle = {
   textAlign: 'right',
