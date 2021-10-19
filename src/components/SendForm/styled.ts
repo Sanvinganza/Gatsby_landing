@@ -82,6 +82,6 @@ export const YellowRectangle = styled.div`
     height: 169px;
     background-color: ${__yellow};
     position: absolute;
-    right: 483px;
+    right: -23px;
     bottom: 190px;
 `;

@@ -50,11 +50,11 @@ const SendForm: React.FC<any> = () => {
             </FormButton>
           </Form>
           <BlackRectangle>
+          <YellowRectangle />
+          <YellowRectangle style={{width: '169px', height: '46px', right: '-85px', bottom: '247px'}}/> 
           </BlackRectangle>
           <FormPurpleRectangle />
           <FormRedRectangle />
-          <YellowRectangle />
-          <YellowRectangle style={{width: '169px', height: '46px', right: '424px', bottom: '247px'}}/> 
         </Container>
       );
 };
