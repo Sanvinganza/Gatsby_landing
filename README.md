@@ -44,4 +44,3 @@ GatsbyJS plugins
 - [**ReactJS**](https://en.reactjs.org/)
 - [**GatsbyJS**](https://www.gatsbyjs.org/)
 - [**Google**](https://www.google.com/)
-- I'm ;)
